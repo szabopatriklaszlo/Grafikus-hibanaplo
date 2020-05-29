@@ -1,2 +1,2 @@
 # Grafikus-hibanaplo
-Copyright protected! 2020 - All rights reserved! You cannot do anything without my permission! Only the test is allowed on your OWN private computer! You cannot modify the code!
+Copyright 2020 - All rights reserved! If you would like to do something with this project, you have to ask my permission!
