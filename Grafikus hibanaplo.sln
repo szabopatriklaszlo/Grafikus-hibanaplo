@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafikus hibanaplo", "Grafikus hibanaplo\Grafikus hibanaplo.csproj", "{C523A88F-F0A4-4061-8CA0-282E2EB32F47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C523A88F-F0A4-4061-8CA0-282E2EB32F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C523A88F-F0A4-4061-8CA0-282E2EB32F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C523A88F-F0A4-4061-8CA0-282E2EB32F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C523A88F-F0A4-4061-8CA0-282E2EB32F47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {376BDE1E-79F0-4950-A6F4-6DCD65E3A323}
+	EndGlobalSection
+EndGlobal
