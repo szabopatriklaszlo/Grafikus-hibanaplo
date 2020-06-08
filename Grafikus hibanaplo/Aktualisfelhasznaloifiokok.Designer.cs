@@ -42,7 +42,7 @@
             this.LB_users.Location = new System.Drawing.Point(290, 120);
             this.LB_users.Name = "LB_users";
             this.LB_users.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.LB_users.Size = new System.Drawing.Size(120, 95);
+            this.LB_users.Size = new System.Drawing.Size(120, 212);
             this.LB_users.TabIndex = 1;
             // 
             // LB_passwords
@@ -51,7 +51,7 @@
             this.LB_passwords.Location = new System.Drawing.Point(405, 120);
             this.LB_passwords.Name = "LB_passwords";
             this.LB_passwords.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.LB_passwords.Size = new System.Drawing.Size(120, 95);
+            this.LB_passwords.Size = new System.Drawing.Size(120, 212);
             this.LB_passwords.TabIndex = 2;
             // 
             // label1
