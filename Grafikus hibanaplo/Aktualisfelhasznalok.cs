@@ -10,36 +10,37 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace Grafikus_hibanaplo
 {
-    public partial class Form1 : Form
+    public partial class Aktualisfelhasznalok : Form
     {
-        public Form1(string fajta)
+        public Aktualisfelhasznalok(string type)
         {
             InitializeComponent();
-            if (fajta == "user")
+            if (type == "sysadmin")
             {
-                LBL_message.Text = "Ön a felhasználói belépést választotta!";
-                this.Text = "Felhasználói bejelentkezés";
+                this.Text = "Aktuális rendszergazdai fiókok";
+                LBL_message.Text = "Aktuális rendszergazdai fiókok";
             }
             else
             {
-                LBL_message.Text = "Ön a rendszergazdai belépést választotta!";
-                this.Text = "Rendszergazdai bejelentkezés";
+                this.Text = "Aktuális felhasználói fiókok";
+                LBL_message.Text = "Aktuális felhasználói fiókok";
             }
-
         }
 
         private void BT_back_Click(object sender, EventArgs e)
         {
-            Start chwindow = new Start();
+            Rendszergazdavalasztofelulet chwindow = new Rendszergazdavalasztofelulet();
             this.Hide();
             chwindow.Closed += (s, args) => this.Close();
             chwindow.Show();
         }
 
-        private void BT_login_Click(object sender, EventArgs e)
+        private void Aktualisrendszergazdaifiokok_Load(object sender, EventArgs e)
         {
-            if (LBL_message.Text == "Ön a felhasználói belépést választotta!")
+            if (LBL_message.Text == "Aktuális rendszergazdai fiókok")
             {
+                List<object> usernames = new List<object>();
+                List<object> passwords = new List<object>();
                 try
                 {
                     string myConnection = "datasource=127.0.0.1;port=3306;username=root;password=root;database=hibanaplo;";
@@ -47,25 +48,19 @@ namespace Grafikus_hibanaplo
                     myConn.Open();
                     MySqlCommand sqlcmd = myConn.CreateCommand();
                     sqlcmd.CommandType = CommandType.Text;
-                    string command = "SELECT * FROM users WHERE username='" + TB_username.Text + "' and password ='" + TB_password.Text + "'"; ;
+                    string command = "SELECT * FROM sysadmins"; ;
                     sqlcmd.CommandText = command;
                     DataTable datatable = new DataTable();
                     MySqlDataAdapter dataadapter = new MySqlDataAdapter(sqlcmd);
                     sqlcmd.ExecuteNonQuery();
                     dataadapter.Fill(datatable);
 
-                    int i = datatable.Rows.Count;
-                    if (i == 0)
+
+                    foreach (DataRow item in datatable.Rows)
                     {
-                        MessageBox.Show("Hibás felhasználónév vagy jelszó!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("A belépés sikeres! ");
-                        felhasznaloibejelento userreporter = new felhasznaloibejelento();
-                        this.Hide();
-                        userreporter.Closed += (s, args) => this.Close();
-                        userreporter.Show();
+                        object[] array = item.ItemArray;
+                        usernames.Add(array[0]);
+                        passwords.Add(array[1]);
                     }
                     myConn.Close();
                 }
@@ -73,10 +68,17 @@ namespace Grafikus_hibanaplo
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
+                }
+                for (int i = 0; i < usernames.Count; i++)
+                {
+                    LB_users.Items.Add(usernames[i]);
+                    LB_passwords.Items.Add(passwords[i]);
                 }
             }
             else
             {
+                List<object> usernames = new List<object>();
+                List<object> passwords = new List<object>();
                 try
                 {
                     string myConnection = "datasource=127.0.0.1;port=3306;username=root;password=root;database=hibanaplo;";
@@ -84,25 +86,19 @@ namespace Grafikus_hibanaplo
                     myConn.Open();
                     MySqlCommand sqlcmd = myConn.CreateCommand();
                     sqlcmd.CommandType = CommandType.Text;
-                    string command = "SELECT * FROM sysadmins WHERE username='" + TB_username.Text + "' and password ='" + TB_password.Text + "'"; ;
+                    string command = "SELECT * FROM users"; ;
                     sqlcmd.CommandText = command;
                     DataTable datatable = new DataTable();
                     MySqlDataAdapter dataadapter = new MySqlDataAdapter(sqlcmd);
                     sqlcmd.ExecuteNonQuery();
                     dataadapter.Fill(datatable);
 
-                    int i = datatable.Rows.Count;
-                    if (i == 0)
+
+                    foreach (DataRow item in datatable.Rows)
                     {
-                        MessageBox.Show("Hibás felhasználónév vagy jelszó!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("A belépés sikeres!");
-                        Rendszergazdavalasztofelulet sysadminchoise = new Rendszergazdavalasztofelulet();
-                        this.Hide();
-                        sysadminchoise.Closed += (s, args) => this.Close();
-                        sysadminchoise.Show();
+                        object[] array = item.ItemArray;
+                        usernames.Add(array[0]);
+                        passwords.Add(array[1]);
                     }
                     myConn.Close();
                 }
@@ -111,8 +107,13 @@ namespace Grafikus_hibanaplo
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
                 }
+                for (int i = 0; i < usernames.Count; i++)
+                {
+                    LB_users.Items.Add(usernames[i]);
+                    LB_passwords.Items.Add(passwords[i]);
+                }
             }
-           
+            
         }
     }
 }

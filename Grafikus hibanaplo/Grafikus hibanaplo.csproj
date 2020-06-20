@@ -47,23 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aktualisfelhasznaloifiokok.cs">
+    <Compile Include="Hibakkezelese.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aktualisfelhasznaloifiokok.Designer.cs">
-      <DependentUpon>Aktualisfelhasznaloifiokok.cs</DependentUpon>
+    <Compile Include="Hibakkezelese.Designer.cs">
+      <DependentUpon>Hibakkezelese.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aktualishibakmegtekintese.cs">
+    <Compile Include="Aktualisfelhasznalok.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aktualishibakmegtekintese.Designer.cs">
-      <DependentUpon>Aktualishibakmegtekintese.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Aktualisrendszergazdaifiokok.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aktualisrendszergazdaifiokok.Designer.cs">
-      <DependentUpon>Aktualisrendszergazdaifiokok.cs</DependentUpon>
+    <Compile Include="Aktualisfelhasznalok.Designer.cs">
+      <DependentUpon>Aktualisfelhasznalok.cs</DependentUpon>
     </Compile>
     <Compile Include="felhasznaloibejelento.cs">
       <SubType>Form</SubType>
@@ -71,17 +65,11 @@
     <Compile Include="felhasznaloibejelento.Designer.cs">
       <DependentUpon>felhasznaloibejelento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Felhasznaloifiokletrehozasa.cs">
+    <Compile Include="Fiokmuveletek.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Felhasznaloifiokletrehozasa.Designer.cs">
-      <DependentUpon>Felhasznaloifiokletrehozasa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Felhasznaloifioktorlese.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Felhasznaloifioktorlese.Designer.cs">
-      <DependentUpon>Felhasznaloifioktorlese.cs</DependentUpon>
+    <Compile Include="Fiokmuveletek.Designer.cs">
+      <DependentUpon>Fiokmuveletek.cs</DependentUpon>
     </Compile>
     <Compile Include="felhasznalologin.cs">
       <SubType>Form</SubType>
@@ -95,64 +83,31 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lezarthibakmegtekintese.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lezarthibakmegtekintese.Designer.cs">
-      <DependentUpon>Lezarthibakmegtekintese.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rendszergazdafiokletrehozasa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Rendszergazdafiokletrehozasa.Designer.cs">
-      <DependentUpon>Rendszergazdafiokletrehozasa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Rendszergazdaifioktorlese.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Rendszergazdaifioktorlese.Designer.cs">
-      <DependentUpon>Rendszergazdaifioktorlese.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Rendszergazdalogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Rendszergazdalogin.Designer.cs">
-      <DependentUpon>Rendszergazdalogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Rendszergazdavalasztofelulet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Rendszergazdavalasztofelulet.Designer.cs">
       <DependentUpon>Rendszergazdavalasztofelulet.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Aktualisfelhasznaloifiokok.resx">
-      <DependentUpon>Aktualisfelhasznaloifiokok.cs</DependentUpon>
+    <EmbeddedResource Include="Hibakkezelese.resx">
+      <DependentUpon>Hibakkezelese.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aktualishibakmegtekintese.resx">
-      <DependentUpon>Aktualishibakmegtekintese.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aktualisrendszergazdaifiokok.resx">
-      <DependentUpon>Aktualisrendszergazdaifiokok.cs</DependentUpon>
+    <EmbeddedResource Include="Aktualisfelhasznalok.resx">
+      <DependentUpon>Aktualisfelhasznalok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="felhasznaloibejelento.resx">
       <DependentUpon>felhasznaloibejelento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Felhasznaloifiokletrehozasa.resx">
-      <DependentUpon>Felhasznaloifiokletrehozasa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Felhasznaloifioktorlese.resx">
-      <DependentUpon>Felhasznaloifioktorlese.cs</DependentUpon>
+    <EmbeddedResource Include="Fiokmuveletek.resx">
+      <DependentUpon>Fiokmuveletek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="felhasznalologin.resx">
       <DependentUpon>felhasznalologin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lezarthibakmegtekintese.resx">
-      <DependentUpon>Lezarthibakmegtekintese.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,15 +119,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Rendszergazdafiokletrehozasa.resx">
-      <DependentUpon>Rendszergazdafiokletrehozasa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Rendszergazdaifioktorlese.resx">
-      <DependentUpon>Rendszergazdaifioktorlese.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Rendszergazdalogin.resx">
-      <DependentUpon>Rendszergazdalogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Rendszergazdavalasztofelulet.resx">
       <DependentUpon>Rendszergazdavalasztofelulet.cs</DependentUpon>
     </EmbeddedResource>

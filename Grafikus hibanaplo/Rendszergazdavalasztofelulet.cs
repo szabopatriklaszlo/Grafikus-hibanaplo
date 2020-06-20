@@ -19,23 +19,23 @@ namespace Grafikus_hibanaplo
 
         private void BT_createsysadmin_Click(object sender, EventArgs e)
         {
-            Rendszergazdafiokletrehozasa createsysadminacount = new Rendszergazdafiokletrehozasa();
+            Fiokmuveletek deletesysadmin = new Fiokmuveletek("createsysadmin");
             this.Hide();
-            createsysadminacount.Closed += (s, args) => this.Close();
-            createsysadminacount.Show();
+            deletesysadmin.Closed += (s, args) => this.Close();
+            deletesysadmin.Show();
         }
 
         private void BT_createuser_Click(object sender, EventArgs e)
         {
-            Felhasznaloifiokletrehozasa createuser = new Felhasznaloifiokletrehozasa();
+            Fiokmuveletek deleteuser = new Fiokmuveletek("createuser");
             this.Hide();
-            createuser.Closed += (s, args) => this.Close();
-            createuser.Show();
+            deleteuser.Closed += (s, args) => this.Close();
+            deleteuser.Show();
         }
 
         private void BT_deletesysadmin_Click(object sender, EventArgs e)
         {
-            Rendszergazdaifioktorlese deletesysadmin = new Rendszergazdaifioktorlese();
+            Fiokmuveletek deletesysadmin = new Fiokmuveletek("deletesysadmin");
             this.Hide();
             deletesysadmin.Closed += (s, args) => this.Close();
             deletesysadmin.Show();
@@ -43,7 +43,7 @@ namespace Grafikus_hibanaplo
 
         private void BT_deleteuser_Click(object sender, EventArgs e)
         {
-            Felhasznaloifioktorlese deleteuser = new Felhasznaloifioktorlese();
+            Fiokmuveletek deleteuser = new Fiokmuveletek("deleteuser");
             this.Hide();
             deleteuser.Closed += (s, args) => this.Close();
             deleteuser.Show();
@@ -51,15 +51,15 @@ namespace Grafikus_hibanaplo
 
         private void BT_showactualusers_Click(object sender, EventArgs e)
         {
-            Aktualisfelhasznaloifiokok actualusers = new Aktualisfelhasznaloifiokok();
+            Aktualisfelhasznalok actualsysadmins = new Aktualisfelhasznalok("user");
             this.Hide();
-            actualusers.Closed += (s, args) => this.Close();
-            actualusers.Show();
+            actualsysadmins.Closed += (s, args) => this.Close();
+            actualsysadmins.Show();
         }
 
         private void BT_showactualsysadmins_Click(object sender, EventArgs e)
         {
-            Aktualisrendszergazdaifiokok actualsysadmins = new Aktualisrendszergazdaifiokok();
+            Aktualisfelhasznalok actualsysadmins = new Aktualisfelhasznalok("sysadmin");
             this.Hide();
             actualsysadmins.Closed += (s, args) => this.Close();
             actualsysadmins.Show();
@@ -67,7 +67,7 @@ namespace Grafikus_hibanaplo
 
         private void BT_showreports_Click(object sender, EventArgs e)
         {
-            Aktualishibakmegtekintese actualreports = new Aktualishibakmegtekintese();
+            Hibakkezelese actualreports = new Hibakkezelese("edit");
             this.Hide();
             actualreports.Closed += (s, args) => this.Close();
             actualreports.Show();
@@ -75,10 +75,10 @@ namespace Grafikus_hibanaplo
 
         private void BT_showclosedreports_Click(object sender, EventArgs e)
         {
-            Lezarthibakmegtekintese closedreports = new Lezarthibakmegtekintese();
+            Hibakkezelese actualreports = new Hibakkezelese("old");
             this.Hide();
-            closedreports.Closed += (s, args) => this.Close();
-            closedreports.Show();
+            actualreports.Closed += (s, args) => this.Close();
+            actualreports.Show();
         }
     }
 }

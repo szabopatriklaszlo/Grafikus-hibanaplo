@@ -1,6 +1,6 @@
 ﻿namespace Grafikus_hibanaplo
 {
-    partial class Aktualisrendszergazdaifiokok
+    partial class Aktualisfelhasznalok
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.BT_back = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_message = new System.Windows.Forms.Label();
             this.LB_passwords = new System.Windows.Forms.ListBox();
             this.LB_users = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
@@ -64,15 +64,15 @@
             this.label2.TabIndex = 41;
             this.label2.Text = "Felhasználó neve";
             // 
-            // label1
+            // LBL_message
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(245, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 26);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Aktuális rendszergazdai fiókok";
+            this.LBL_message.AutoSize = true;
+            this.LBL_message.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LBL_message.Location = new System.Drawing.Point(245, 9);
+            this.LBL_message.Name = "LBL_message";
+            this.LBL_message.Size = new System.Drawing.Size(306, 26);
+            this.LBL_message.TabIndex = 40;
+            this.LBL_message.Text = "Aktuális DINAMIKUS fiókok";
             // 
             // LB_passwords
             // 
@@ -92,7 +92,7 @@
             this.LB_users.Size = new System.Drawing.Size(120, 212);
             this.LB_users.TabIndex = 38;
             // 
-            // Aktualisrendszergazdaifiokok
+            // Aktualisfelhasznalok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,10 +100,10 @@
             this.Controls.Add(this.BT_back);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBL_message);
             this.Controls.Add(this.LB_passwords);
             this.Controls.Add(this.LB_users);
-            this.Name = "Aktualisrendszergazdaifiokok";
+            this.Name = "Aktualisfelhasznalok";
             this.Text = "Aktuális rendszergazdai fiókok";
             this.Load += new System.EventHandler(this.Aktualisrendszergazdaifiokok_Load);
             this.ResumeLayout(false);
@@ -116,7 +116,7 @@
         private System.Windows.Forms.Button BT_back;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_message;
         private System.Windows.Forms.ListBox LB_passwords;
         private System.Windows.Forms.ListBox LB_users;
     }

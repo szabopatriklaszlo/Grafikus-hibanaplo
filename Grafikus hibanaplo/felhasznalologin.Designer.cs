@@ -34,10 +34,10 @@
             this.TB_username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_message = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PB_Photo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Photo)).BeginInit();
             this.SuspendLayout();
             // 
             // BT_login
@@ -95,15 +95,15 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Felhasználónév:";
             // 
-            // label1
+            // LBL_message
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(193, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 26);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Ön a felhasználói belépést választotta!";
+            this.LBL_message.AutoSize = true;
+            this.LBL_message.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LBL_message.Location = new System.Drawing.Point(193, 59);
+            this.LBL_message.Name = "LBL_message";
+            this.LBL_message.Size = new System.Drawing.Size(392, 26);
+            this.LBL_message.TabIndex = 7;
+            this.LBL_message.Text = "Ön a DINAMIKUS belépést választotta!";
             // 
             // label4
             // 
@@ -115,22 +115,22 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Figyelem! A program bezárásával autómatikusan kijelentkezik!";
             // 
-            // pictureBox1
+            // PB_Photo
             // 
-            this.pictureBox1.BackgroundImage = global::Grafikus_hibanaplo.Properties.Resources.avat_01_512;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(613, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.PB_Photo.BackgroundImage = global::Grafikus_hibanaplo.Properties.Resources.avat_01_512;
+            this.PB_Photo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Photo.Location = new System.Drawing.Point(613, 12);
+            this.PB_Photo.Name = "PB_Photo";
+            this.PB_Photo.Size = new System.Drawing.Size(175, 175);
+            this.PB_Photo.TabIndex = 15;
+            this.PB_Photo.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PB_Photo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.BT_login);
             this.Controls.Add(this.BT_back);
@@ -138,10 +138,10 @@
             this.Controls.Add(this.TB_username);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBL_message);
             this.Name = "Form1";
             this.Text = "Felhasználói bejelentkezés";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Photo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,8 +155,8 @@
         private System.Windows.Forms.TextBox TB_username;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_message;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_Photo;
     }
 }

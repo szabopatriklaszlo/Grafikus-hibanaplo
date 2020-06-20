@@ -18,15 +18,15 @@ namespace Grafikus_hibanaplo
 
         private void BT_sysadmin_Click(object sender, EventArgs e)
         {
-            Rendszergazdalogin sysadminlogin = new Rendszergazdalogin();
+            Form1 userlogin = new Form1("sysadmin");
             this.Hide();
-            sysadminlogin.Closed += (s, args) => this.Close();
-            sysadminlogin.Show();
+            userlogin.Closed += (s, args) => this.Close();
+            userlogin.Show();
         }
 
         private void BT_user_Click(object sender, EventArgs e)
         {
-            Form1 userlogin = new Form1();
+            Form1 userlogin = new Form1("user");
             this.Hide();
             userlogin.Closed += (s, args) => this.Close();
             userlogin.Show();

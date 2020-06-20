@@ -1,6 +1,6 @@
 ﻿namespace Grafikus_hibanaplo
 {
-    partial class Aktualishibakmegtekintese
+    partial class Hibakkezelese
     {
         /// <summary>
         /// Required designer variable.
@@ -52,11 +52,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.RB_showmessage = new System.Windows.Forms.RadioButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.LBL_spec1 = new System.Windows.Forms.Label();
+            this.LBL_spec2 = new System.Windows.Forms.Label();
             this.RB_closereport = new System.Windows.Forms.RadioButton();
             this.BT_start = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
+            this.LBL_message = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BT_back
@@ -268,23 +268,23 @@
             this.RB_showmessage.UseVisualStyleBackColor = true;
             this.RB_showmessage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RB_showmessage_MouseDown);
             // 
-            // label13
+            // LBL_spec1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(903, 289);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 13);
-            this.label13.TabIndex = 68;
-            this.label13.Text = "Azonosítóhoz tartozó";
+            this.LBL_spec1.AutoSize = true;
+            this.LBL_spec1.Location = new System.Drawing.Point(903, 289);
+            this.LBL_spec1.Name = "LBL_spec1";
+            this.LBL_spec1.Size = new System.Drawing.Size(107, 13);
+            this.LBL_spec1.TabIndex = 68;
+            this.LBL_spec1.Text = "Azonosítóhoz tartozó";
             // 
-            // label14
+            // LBL_spec2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(903, 302);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 13);
-            this.label14.TabIndex = 69;
-            this.label14.Text = "bejelentés lezárása";
+            this.LBL_spec2.AutoSize = true;
+            this.LBL_spec2.Location = new System.Drawing.Point(903, 302);
+            this.LBL_spec2.Name = "LBL_spec2";
+            this.LBL_spec2.Size = new System.Drawing.Size(97, 13);
+            this.LBL_spec2.TabIndex = 69;
+            this.LBL_spec2.Text = "bejelentés lezárása";
             // 
             // RB_closereport
             // 
@@ -307,26 +307,26 @@
             this.BT_start.UseVisualStyleBackColor = true;
             this.BT_start.Click += new System.EventHandler(this.BT_start_Click);
             // 
-            // label15
+            // LBL_message
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(401, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(238, 26);
-            this.label15.TabIndex = 72;
-            this.label15.Text = "Aktuális bejelentések";
+            this.LBL_message.AutoSize = true;
+            this.LBL_message.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LBL_message.Location = new System.Drawing.Point(401, 9);
+            this.LBL_message.Name = "LBL_message";
+            this.LBL_message.Size = new System.Drawing.Size(285, 26);
+            this.LBL_message.TabIndex = 72;
+            this.LBL_message.Text = "DINAMIKUS bejelentések";
             // 
-            // Aktualishibakmegtekintese
+            // Hibakkezelese
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 450);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.LBL_message);
             this.Controls.Add(this.BT_start);
             this.Controls.Add(this.RB_closereport);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.LBL_spec2);
+            this.Controls.Add(this.LBL_spec1);
             this.Controls.Add(this.RB_showmessage);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -351,7 +351,7 @@
             this.Controls.Add(this.LB_typeofreports);
             this.Controls.Add(this.LB_ids);
             this.Controls.Add(this.BT_back);
-            this.Name = "Aktualishibakmegtekintese";
+            this.Name = "Hibakkezelese";
             this.Text = "Aktuális hibák megtekintése";
             this.Load += new System.EventHandler(this.Aktualishibakmegtekintese_Load);
             this.ResumeLayout(false);
@@ -385,10 +385,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton RB_showmessage;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label LBL_spec1;
+        private System.Windows.Forms.Label LBL_spec2;
         private System.Windows.Forms.RadioButton RB_closereport;
         private System.Windows.Forms.Button BT_start;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label LBL_message;
     }
 }
