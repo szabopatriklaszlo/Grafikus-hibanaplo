@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.Net;
+using System.Net.Mail;
 namespace Grafikus_hibanaplo
 {
     public partial class felhasznaloibejelento : Form
@@ -73,6 +74,26 @@ namespace Grafikus_hibanaplo
                 sqlcmd.ExecuteNonQuery();
                 myConn.Close();
                 MessageBox.Show("A hibát sikeresen bejelentette!");
+                try
+                {
+                    string message = "Kedves rendszergazda! A hibanapló szoftveren keresztül bejelentése érkezett! A bejelentés ideje:"+DateTime.Now;
+                    string senderemail = "secret";
+                    string senderemailpassword = "secret";
+                    string systemadministratorsemail = "secret";
+                    MailMessage msg = new MailMessage(senderemail, systemadministratorsemail, "Hiba bejelentés érkezett!", message);
+                    msg.IsBodyHtml = true;
+                    SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
+                    sc.UseDefaultCredentials = false;
+                    NetworkCredential cre = new NetworkCredential(senderemail, senderemailpassword);
+                    sc.Credentials = cre;
+                    sc.EnableSsl = true;
+                    sc.Send(msg);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("A rendszer valamilyen hibát észlelt, a rendszergazda nem lett emailben kiértesítve! Kérem keresse fel személyesen!");
+                }
 
             }
             catch (Exception ex)
@@ -97,6 +118,9 @@ namespace Grafikus_hibanaplo
             TB_phonenumberofreporter.Text = " ";
             TB_timeofperception.Text = " ";
             TB_longreport.Text = " ";
+
+
+
         }
     }
 }
