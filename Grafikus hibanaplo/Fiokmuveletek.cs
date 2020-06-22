@@ -75,7 +75,7 @@ namespace Grafikus_hibanaplo
                     myConn.Close();
                     MessageBox.Show("A művelet végrehajtásra került! Kérjük ellenőrízze az eredményességét az aktuális felhasználói fiókok fül alatt.");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
@@ -96,7 +96,7 @@ namespace Grafikus_hibanaplo
                     myConn.Close();
                     MessageBox.Show("A művelet végrehajtásra került! Kérjük ellenőrízze az eredményességét az aktuális felhasználói fiókok fül alatt.");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
@@ -117,7 +117,7 @@ namespace Grafikus_hibanaplo
                     myConn.Close();
                     MessageBox.Show("A művelet végrehajtásra került! Kérjük ellenőrízze az eredményességét az aktuális rendszergazdai fiókok fül alatt.");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
@@ -138,7 +138,7 @@ namespace Grafikus_hibanaplo
                     myConn.Close();
                     MessageBox.Show("A művelet végrehajtásra került! Kérjük ellenőrízze az eredményességét az aktuális rendszergazdai fiókok fül alatt.");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");

@@ -30,8 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BT_createsysadmin = new System.Windows.Forms.Button();
-            this.BT_deletesysadmin = new System.Windows.Forms.Button();
+            this.BT_emailsystem = new System.Windows.Forms.Button();
             this.BT_createuser = new System.Windows.Forms.Button();
             this.BT_deleteuser = new System.Windows.Forms.Button();
             this.BT_showreports = new System.Windows.Forms.Button();
@@ -60,27 +59,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Kérem válassza ki a kívánt műveletet!";
             // 
-            // BT_createsysadmin
+            // BT_emailsystem
             // 
-            this.BT_createsysadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BT_createsysadmin.Location = new System.Drawing.Point(116, 165);
-            this.BT_createsysadmin.Name = "BT_createsysadmin";
-            this.BT_createsysadmin.Size = new System.Drawing.Size(180, 55);
-            this.BT_createsysadmin.TabIndex = 2;
-            this.BT_createsysadmin.Text = "Rendszergazdai fiók létrehozása";
-            this.BT_createsysadmin.UseVisualStyleBackColor = true;
-            this.BT_createsysadmin.Click += new System.EventHandler(this.BT_createsysadmin_Click);
-            // 
-            // BT_deletesysadmin
-            // 
-            this.BT_deletesysadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BT_deletesysadmin.Location = new System.Drawing.Point(116, 226);
-            this.BT_deletesysadmin.Name = "BT_deletesysadmin";
-            this.BT_deletesysadmin.Size = new System.Drawing.Size(180, 55);
-            this.BT_deletesysadmin.TabIndex = 4;
-            this.BT_deletesysadmin.Text = "Rendszergazdai fiók törlése";
-            this.BT_deletesysadmin.UseVisualStyleBackColor = true;
-            this.BT_deletesysadmin.Click += new System.EventHandler(this.BT_deletesysadmin_Click);
+            this.BT_emailsystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.BT_emailsystem.Location = new System.Drawing.Point(116, 165);
+            this.BT_emailsystem.Name = "BT_emailsystem";
+            this.BT_emailsystem.Size = new System.Drawing.Size(180, 116);
+            this.BT_emailsystem.TabIndex = 2;
+            this.BT_emailsystem.Text = "E-mail értesítő rendszer kezelése";
+            this.BT_emailsystem.UseVisualStyleBackColor = true;
+            this.BT_emailsystem.Click += new System.EventHandler(this.BT_emailsystem_Click_1);
             // 
             // BT_createuser
             // 
@@ -159,8 +147,7 @@
             this.Controls.Add(this.BT_showreports);
             this.Controls.Add(this.BT_deleteuser);
             this.Controls.Add(this.BT_createuser);
-            this.Controls.Add(this.BT_deletesysadmin);
-            this.Controls.Add(this.BT_createsysadmin);
+            this.Controls.Add(this.BT_emailsystem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Rendszergazdavalasztofelulet";
@@ -174,8 +161,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BT_createsysadmin;
-        private System.Windows.Forms.Button BT_deletesysadmin;
+        private System.Windows.Forms.Button BT_emailsystem;
         private System.Windows.Forms.Button BT_createuser;
         private System.Windows.Forms.Button BT_deleteuser;
         private System.Windows.Forms.Button BT_showreports;

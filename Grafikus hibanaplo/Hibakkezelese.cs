@@ -82,7 +82,7 @@ namespace Grafikus_hibanaplo
                     }
                     myConn.Close();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
@@ -128,7 +128,7 @@ namespace Grafikus_hibanaplo
                     }
                     myConn.Close();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");

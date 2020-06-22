@@ -17,13 +17,6 @@ namespace Grafikus_hibanaplo
             InitializeComponent();
         }
 
-        private void BT_createsysadmin_Click(object sender, EventArgs e)
-        {
-            Fiokmuveletek deletesysadmin = new Fiokmuveletek("createsysadmin");
-            this.Hide();
-            deletesysadmin.Closed += (s, args) => this.Close();
-            deletesysadmin.Show();
-        }
 
         private void BT_createuser_Click(object sender, EventArgs e)
         {
@@ -31,14 +24,6 @@ namespace Grafikus_hibanaplo
             this.Hide();
             deleteuser.Closed += (s, args) => this.Close();
             deleteuser.Show();
-        }
-
-        private void BT_deletesysadmin_Click(object sender, EventArgs e)
-        {
-            Fiokmuveletek deletesysadmin = new Fiokmuveletek("deletesysadmin");
-            this.Hide();
-            deletesysadmin.Closed += (s, args) => this.Close();
-            deletesysadmin.Show();
         }
 
         private void BT_deleteuser_Click(object sender, EventArgs e)
@@ -79,6 +64,14 @@ namespace Grafikus_hibanaplo
             this.Hide();
             actualreports.Closed += (s, args) => this.Close();
             actualreports.Show();
+        }
+
+        private void BT_emailsystem_Click_1(object sender, EventArgs e)
+        {
+            Emailmuvelet emailsettings = new Emailmuvelet();
+            this.Hide();
+            emailsettings.Closed += (s, args) => this.Close();
+            emailsettings.Show();
         }
     }
 }

@@ -76,10 +76,29 @@ namespace Grafikus_hibanaplo
                 MessageBox.Show("A hibát sikeresen bejelentette!");
                 try
                 {
-                    string message = "Kedves rendszergazda! A hibanapló szoftveren keresztül bejelentése érkezett! A bejelentés ideje:"+DateTime.Now;
+                    myConn.Open();
+                    sqlcmd = myConn.CreateCommand();
+                    sqlcmd.CommandType = CommandType.Text;
+                    command = "SELECT * FROM email";
+                    sqlcmd.CommandText = command;
+                    DataTable datatable = new DataTable();
+                    MySqlDataAdapter dataadapter = new MySqlDataAdapter(sqlcmd);
+                    sqlcmd.ExecuteNonQuery();
+                    dataadapter.Fill(datatable);
                     string senderemail = "secret";
                     string senderemailpassword = "secret";
                     string systemadministratorsemail = "secret";
+
+                    foreach (DataRow item in datatable.Rows)
+                    {
+                        object[] array = item.ItemArray;
+                        systemadministratorsemail = Convert.ToString(array[0]);
+                        senderemail= Convert.ToString(array[1]);
+                        senderemailpassword = Convert.ToString(array[2]);
+                    }
+                    myConn.Close();
+                    string message = "Kedves rendszergazda! A hibanapló szoftveren keresztül bejelentése érkezett! A bejelentés ideje:"+DateTime.Now;
+                    
                     MailMessage msg = new MailMessage(senderemail, systemadministratorsemail, "Hiba bejelentés érkezett!", message);
                     msg.IsBodyHtml = true;
                     SmtpClient sc = new SmtpClient("smtp.gmail.com", 587);
@@ -89,14 +108,14 @@ namespace Grafikus_hibanaplo
                     sc.EnableSsl = true;
                     sc.Send(msg);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     MessageBox.Show("A rendszer valamilyen hibát észlelt, a rendszergazda nem lett emailben kiértesítve! Kérem keresse fel személyesen!");
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 MessageBox.Show("Nem sikerült kapcsolódni az adatbázishoz!");
